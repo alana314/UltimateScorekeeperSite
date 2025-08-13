@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Scorekeeper - Track Scores for Ultimate Frisbee, Soccer, Football, Baseball, Basketball, Volleyball</title>
+    <meta name="description" content="Ultimate Scorekeeper is designed for Ultimate Frisbee but can be used to track scores in soccer, football, baseball, basketball, or volleyball. The best scorekeeping app for Apple Watch & iPhone.">
+    <meta name="keywords" content="Ultimate Frisbee, scorekeeper, scorekeeping app, soccer, football, baseball, basketball, volleyball, Apple Watch, iPhone, sports stats, timeout management, workout tracking, personal stats, team sports, game tracker">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #34994d;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: white;
+            font-weight: bold;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;
+            margin: 0 auto 30px;
+            display: block;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .features {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .features h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .feature-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .app-store-section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .app-store-button {
+            display: inline-block;
+            margin: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .app-store-button:hover {
+            transform: scale(1.05);
+        }
+
+        .app-store-button img {
+            height: 60px;
+            width: auto;
+        }
+
+        .screenshots {
+            margin-bottom: 60px;
+        }
+
+        .screenshots h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .screenshot-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            justify-items: center;
+        }
+
+        .screenshot {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .screenshot:hover {
+            transform: scale(1.02);
+        }
+
+        .support-section {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .support-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .support-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .support-link {
+            display: inline-block;
+            background: white;
+            color: #34994d;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .support-link:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .container {
+                padding: 20px 15px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .screenshot-gallery {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="assets/images/ultimate-sportskeeper-icon-3.png" alt="Ultimate Scorekeeper App Icon" class="app-icon">
+            <h1>Ultimate Scorekeeper</h1>
+            <p class="subtitle">The Ultimate Frisbee Scorekeeping App for Apple Watch & iPhone</p>
+        </header>
+
+        <section class="features">
+            <h2>Everything You Need to Track Your Game</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>📊 Score Tracking</h3>
+                    <p>Keep accurate score for light and dark teams with simple controls</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🏃‍♂️ Workout Tracking</h3>
+                    <p>Record your disc sports workouts directly from the app. View your heartrate, distance, and workout length in real-time.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>⏱️ Timeout Management</h3>
+                    <p>Track timeouts and game time to stay on top of game flow</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🎯 Personal Stats</h3>
+                    <p>Log your personal points and assists to track your individual performance</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="multi-sport-section" style="text-align:center; margin-bottom:60px; background:rgba(255,255,255,0.08); padding:30px 20px; border-radius:18px; border:1px solid rgba(255,255,255,0.18);">
+            <h2 style="font-size:1.7rem; margin-bottom:18px;">Designed for Ultimate Frisbee, Great for Any Sport</h2>
+            <p style="font-size:1.15rem; max-width:700px; margin:0 auto; opacity:0.93;">Ultimate Scorekeeper was created for Ultimate Frisbee, but its flexible score tracking features make it perfect for soccer, football, baseball, basketball, volleyball, and more. Easily keep score, manage timeouts, and log stats for any team sport!</p>
+        </section>
+        <section class="app-store-section">
+            <h2>Download Now</h2>
+            <a href="https://apps.apple.com/app/ultimate-scorekeeper" class="app-store-button" target="_blank">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+            </a>
+        </section>
+
+        <section class="screenshots">
+            <h2>See It In Action</h2>
+            <div class="screenshot-gallery">
+                <img src="assets/images/iphone-16.png" alt="Ultimate Scorekeeper on iPhone" class="screenshot">
+                <img src="assets/images/watch-series-10-46mm-1.png" alt="Ultimate Scorekeeper on Apple Watch" class="screenshot">
+                <img src="assets/images/watch-series-10-46mm-2.png" alt="Ultimate Scorekeeper Apple Watch Interface" class="screenshot">
+            </div>
+        </section>
+
+        <section class="support-section">
+            <h2>Need Help?</h2>
+            <p>Have questions or feedback about Ultimate Scorekeeper? We're here to help!</p>
+            <a href="https://forms.gle/4mN2uMSHpbHUhfVX8" class="support-link" target="_blank">
+                Contact Support
+            </a>
+        </section>
+    </div>
+</body>
+</html>
